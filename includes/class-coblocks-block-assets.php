@@ -182,20 +182,13 @@ class CoBlocks_Block_Assets {
 		 */
 		$bundled_icons_enabled = (bool) apply_filters( 'coblocks_bundled_icons_enabled', true );
 
-		// WP.com custom - START
-		// $form_subject = ( new CoBlocks_Form() )->default_subject();
-		// WP.com custom - END
-
 		wp_localize_script(
 			'coblocks-editor',
 			'coblocksBlockData',
 			array(
 				'form'                           => array(
 					'adminEmail'   => $email_to,
-					// WP.com custom - START
-					// 'emailSubject' => $form_subject,
 					'emailSubject' => $post_title,
-					// WP.com custom - END
 				),
 				'cropSettingsOriginalImageNonce' => wp_create_nonce( 'cropSettingsOriginalImageNonce' ),
 				'cropSettingsNonce'              => wp_create_nonce( 'cropSettingsNonce' ),
@@ -290,14 +283,6 @@ class CoBlocks_Block_Assets {
 	 * @since 1.9.5
 	 */
 	public function frontend_scripts() {
-
-		// Custom scripts are not allowed in AMP, so short-circuit.
-		// WP.com custom - START
-		// if ( CoBlocks()->is_amp() ) {
-		// 	return;
-		// }
-		// WP.com custom - END
-
 		// Define where the asset is loaded from.
 		$dir = CoBlocks()->asset_source( 'js' );
 
@@ -314,72 +299,6 @@ class CoBlocks_Block_Assets {
 				true
 			);
 		}
-
-		// WP.com custom - START
-		/*
-			DISABLED ON WPCOM
-			These blocks are unavailable and should not have their assets enqueued.
-			See customization in blocks.js.
-			These sections check for `core/block` (reusable blocks) and enqueue assets that are not necessary.
-		// Carousel block.
-		if ( has_block( 'coblocks/gallery-carousel' ) || has_block( 'core/block' ) ) {
-			wp_enqueue_script(
-				'coblocks-flickity',
-				$vendors_dir . '/flickity.js',
-				array( 'jquery' ),
-				COBLOCKS_VERSION,
-				true
-			);
-
-			if ( has_block( 'coblocks/accordion' ) || has_block( 'core/block' ) ) {
-				wp_enqueue_script(
-					'coblocks-accordion-carousel',
-					$dir . 'coblocks-accordion-carousel.js',
-					array( 'coblocks-flickity' ),
-					COBLOCKS_VERSION,
-					true
-				);
-			}
-		}
-
-		// Post Carousel block.
-		if ( has_block( 'coblocks/post-carousel' ) || has_block( 'core/block' ) ) {
-			wp_enqueue_script(
-				'coblocks-slick',
-				$vendors_dir . '/slick.js',
-				array( 'jquery' ),
-				COBLOCKS_VERSION,
-				true
-			);
-			wp_enqueue_script(
-				'coblocks-slick-initializer-front',
-				$dir . 'coblocks-slick-initializer-front.js',
-				array( 'jquery' ),
-				COBLOCKS_VERSION,
-				true
-			);
-		}
-
-		// Events block.
-		if ( has_block( 'coblocks/events' ) || has_block( 'core/block' ) ) {
-			wp_enqueue_script(
-				'coblocks-slick',
-				$vendors_dir . '/slick.js',
-				array( 'jquery' ),
-				COBLOCKS_VERSION,
-				true
-			);
-			wp_enqueue_script(
-				'coblocks-events',
-				$dir . 'coblocks-events.js',
-				array( 'jquery' ),
-				COBLOCKS_VERSION,
-				true
-			);
-		}
-
-		*/
-		// WP.com custom - END
 
 		// Lightbox.
 		if (

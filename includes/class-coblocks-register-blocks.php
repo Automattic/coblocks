@@ -69,34 +69,6 @@ class CoBlocks_Register_Blocks {
 		// Shortcut for the slug.
 		$slug = $this->slug;
 
-		// WP.com custom - START
-		/*
-		register_block_type(
-			$slug . '/accordion',
-			array(
-				'editor_script' => $slug . '-editor',
-				'editor_style'  => $slug . '-editor',
-				'style'         => $slug . '-frontend',
-			)
-		);
-		register_block_type(
-			$slug . '/alert',
-			array(
-				'editor_script' => $slug . '-editor',
-				'editor_style'  => $slug . '-editor',
-				'style'         => $slug . '-frontend',
-			)
-		);
-		register_block_type(
-			$slug . '/author',
-			array(
-				'editor_script' => $slug . '-editor',
-				'editor_style'  => $slug . '-editor',
-				'style'         => $slug . '-frontend',
-			)
-		);
-		*/
-		// WP.com custom - END
 		register_block_type(
 			$slug . '/click-to-tweet',
 			array(
@@ -113,42 +85,6 @@ class CoBlocks_Register_Blocks {
 				'style'         => $slug . '-frontend',
 			)
 		);
-		// WP.com custom - START
-		/*
-		register_block_type(
-			$slug . '/gif',
-			array(
-				'editor_script' => $slug . '-editor',
-				'editor_style'  => $slug . '-editor',
-				'style'         => $slug . '-frontend',
-			)
-		);
-		register_block_type(
-			$slug . '/gist',
-			array(
-				'editor_script' => $slug . '-editor',
-				'editor_style'  => $slug . '-editor',
-				'style'         => $slug . '-frontend',
-			)
-		);
-		register_block_type(
-			$slug . '/highlight',
-			array(
-				'editor_script' => $slug . '-editor',
-				'editor_style'  => $slug . '-editor',
-				'style'         => $slug . '-frontend',
-			)
-		);
-		register_block_type(
-			$slug . '/gallery-carousel',
-			array(
-				'editor_script' => $slug . '-editor',
-				'editor_style'  => $slug . '-editor',
-				'style'         => $slug . '-frontend',
-			)
-		);
-		*/
-		// WP.com custom - END
 		register_block_type(
 			$slug . '/gallery-masonry',
 			array(
