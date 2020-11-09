@@ -154,10 +154,8 @@ class CoBlocks_Block_Assets {
 			true
 		);
 
-		// WP.com custom - START
 		$post_id    = filter_input( INPUT_GET, 'post', FILTER_SANITIZE_NUMBER_INT );
 		$post_title = get_bloginfo( 'name' ) . ( ( false === $post_id ) ? '' : sprintf( ' - %s', get_the_title( $post_id ) ) );
-		// WP.com custom - END
 
 		/**
 		 * Filter the default block email address value

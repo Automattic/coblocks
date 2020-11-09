@@ -2,14 +2,11 @@
  * WordPress dependencies
  */
 import {
-	// WP.com custom - START
 	getCategories,
-	// WP.com custom - END
 	registerBlockType,
 } from '@wordpress/blocks';
-// WP.com custom - START
+
 import { __, sprintf } from '@wordpress/i18n';
-// WP.com custom - END
 
 // Register block category
 import './utils/block-category';
@@ -57,7 +54,6 @@ const registerBlock = ( block ) => {
 
 	const { name, settings } = block;
 
-	// WP.com custom - START
 	// See https://github.com/Automattic/jetpack/issues/14598
 	const availableCategories = wp.blocks.getCategories().map( category => category.slug );
 	switch ( name ) {
@@ -84,7 +80,6 @@ const registerBlock = ( block ) => {
 			category = 'layout';
 			break;
 	}
-	// WP.com custom - END
 
 	registerBlockType( name, {
 		category,

@@ -59,13 +59,11 @@ class Controls extends Component {
 					/>
           {
             /**
-             * WP.com custom - START
              * Using ToolbarGroup to make controls render.
              * See https://github.com/godaddy-wordpress/coblocks/issues/1670
              */
           }
 					<ToolbarGroup
-            // WP.com custom - END
 						isCollapsed={ true }
 						icon={ activeCount.icon }
 						label={ __( 'Change pricing table count', 'coblocks' ) }
