@@ -57,12 +57,6 @@ class Controls extends Component {
 						value={ contentAlign }
 						onChange={ ( nextContentAlign ) => setAttributes( { contentAlign: nextContentAlign } ) }
 					/>
-          {
-            /**
-             * Using ToolbarGroup to make controls render.
-             * See https://github.com/godaddy-wordpress/coblocks/issues/1670
-             */
-          }
 					<ToolbarGroup
 						isCollapsed={ true }
 						icon={ activeCount.icon }

@@ -55,7 +55,7 @@ const registerBlock = ( block ) => {
 	const { name, settings } = block;
 
 	// See https://github.com/Automattic/jetpack/issues/14598
-	const availableCategories = wp.blocks.getCategories().map( category => category.slug );
+	const availableCategories = getCategories().map( category => category.slug );
 	switch ( name ) {
 		case 'coblocks/click-to-tweet':
 		case 'coblocks/logos':
