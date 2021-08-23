@@ -174,12 +174,12 @@ class CoBlocks_Block_Assets {
 			'coblocks-editor',
 			'coblocksBlockData',
 			array(
-				'bundledIconsEnabled'            => false,
-				'customIcons'                    => array(),
-				'customIconConfigExists'         => false,
-				'typographyControlsEnabled'      => false,
-				'animationControlsEnabled'       => false,
-				'localeCode'                     => get_locale(),
+				'bundledIconsEnabled'       => false,
+				'customIcons'               => array(),
+				'customIconConfigExists'    => false,
+				'typographyControlsEnabled' => false,
+				'animationControlsEnabled'  => false,
+				'localeCode'                => get_locale(),
 			)
 		);
 
